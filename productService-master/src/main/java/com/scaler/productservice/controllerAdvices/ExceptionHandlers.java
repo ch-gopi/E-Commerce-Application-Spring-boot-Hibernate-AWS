@@ -18,13 +18,13 @@ public class ExceptionHandlers {
         arithmeticExceptionDto.setMessage("It is an arithmetic exception");
        return new ResponseEntity<>(arithmeticExceptionDto, HttpStatus.INTERNAL_SERVER_ERROR);
     }
-    @ExceptionHandler
+   @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<ArrayIndexOutOfBoundsExceptionDto> handleAnotherException(){
         ArrayIndexOutOfBoundsExceptionDto arrayIndexOutOfBoundsExceptionDto = new ArrayIndexOutOfBoundsExceptionDto();
         arrayIndexOutOfBoundsExceptionDto.setMessage("Number of elements exceeded");
         return new ResponseEntity<>(arrayIndexOutOfBoundsExceptionDto,HttpStatus.INSUFFICIENT_STORAGE);
     }
-
+   @ExceptionHandler( ProductNotExistsException.class)
     public ResponseEntity<ExceptionDto> productNotExistsException(ProductNotExistsException productNotExistsException){
         ExceptionDto dto = new ExceptionDto();
         dto.setMessage(productNotExistsException.getMessage());
