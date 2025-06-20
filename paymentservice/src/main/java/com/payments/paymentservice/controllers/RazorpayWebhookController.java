@@ -10,6 +10,6 @@ public class RazorpayWebhookController {
 
     @PostMapping
     public void handleWebhookEvent() {
-        System.out.println("Hi");
+        System.out.println("Webhook");
     }
 }
