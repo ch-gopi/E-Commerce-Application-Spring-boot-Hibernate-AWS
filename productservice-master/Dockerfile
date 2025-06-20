@@ -1,4 +1,9 @@
 FROM openjdk:17
 LABEL authors="gopi"
 
-ENTRYPOINT ["top", "-b"]
+#sudo apt-get update
+#sudo apt-get install
+#sudo apt-get install java
+
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
