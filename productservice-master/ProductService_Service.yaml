@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: productserviceee
+spec:
+  selector:
+    app: productserviceee
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 8080
+  type: LoadBalancer
+  

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: productserviceee
+  labels:
+    app: productserviceee
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: productserviceee
+  template:
+    metadata:
+      name: productserviceee
+      labels:
+        app: productserviceee
+    spec:
+      containers:
+        - name: productserviceee
+          image: namanbhalla/productservice:v0.000001
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+      restartPolicy: Always
+      
