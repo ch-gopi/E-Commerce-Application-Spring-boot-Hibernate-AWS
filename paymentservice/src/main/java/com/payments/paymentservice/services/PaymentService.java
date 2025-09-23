@@ -32,7 +32,7 @@ public class PaymentService {
         // String userEmail = order.getUser().getEmail();
 
         Long amount = 1000L;
-        String userName = "Naman Bhalla";
+        String userName = "gopi ch";
         String userMobile = "+919999999999";
         String userEmail = "abc@example.com";
 
